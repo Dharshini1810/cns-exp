@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class RSA {
     static int gcd(int e, int z) {
         if (e == 0)
@@ -9,7 +7,6 @@ public class RSA {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int p = 3;
         int q = 7;
         double msg = 12;
