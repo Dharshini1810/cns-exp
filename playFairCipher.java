@@ -11,13 +11,14 @@ class playFairCipher{
             else 
                 message+=pt.charAt(i);
         }
-        for(int i=0;i<message.length();i+=2){ 
+        for(int i=0;i<message.length()-1;i+=2){ 
             if(message.charAt(i) == message.charAt(i+1))
                 message=message.substring(0, i + 1)+'x'+message.substring(i + 1);
         } 
         if(message.length()%2==1){
             message+='x';
         } 
+        // System.out.print(message);
         return message;
     } 
     
@@ -91,10 +92,7 @@ class playFairCipher{
         for(int i=0;i<26;i++){  
             String ch=""; 
             ch+=(char)((int)'a'+i); 
-            if(ch.equals("i") && key.contains(ch)){
-               i+=1; 
-            } 
-            else if(ch.equals("j") && key.contains(ch) && pt1.contains("i")){
+            if(ch.equals("j") && key.contains(ch) && pt1.contains("i")){
                 pt1=pt1.substring(0,pt1.length()-1); 
             } 
             else if(!key.contains(ch)){

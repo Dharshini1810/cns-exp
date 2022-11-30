@@ -1,6 +1,6 @@
 import java.util.*; 
-class Main{
-    public static void vigenereCipher(String[] args){
+class vigenereCipher{
+    public static void main(String[] args){
         //Repeat the key value upto length of plain text 
         //(pt[i]+key[i])mod26 --> convert this to char 
         Scanner sc=new Scanner(System.in); 
@@ -23,6 +23,5 @@ class Main{
             int s=(temp.indexOf(pt.charAt(i))+temp.indexOf(key.charAt(i)))%26;
             System.out.print(temp.charAt(s));
         }
-        
     }
 }
